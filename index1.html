@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>我的个人网站 | 欢迎光临</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(120deg, #0f172a, #1e293b);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: #38bdf8;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            font-weight: 500;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.85;
+            margin-bottom: 1rem;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-bar a {
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .contact-bar a:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* 主要内容区域 */
+        .content {
+            padding: 2rem 2rem 2.5rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            border-left: 5px solid #38bdf8;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .card {
+            background: #f8fafc;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -10px rgba(0,0,0,0.1);
+            border-color: #b9e0ff;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .date {
+            font-size: 0.8rem;
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #f1f5f9;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .header {
+                padding: 2rem 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 头部信息 -->
+    <div class="header">
+        <div class="avatar">✨</div>
+        <h1>林晓晨</h1>
+        <div class="tagline">前端开发 · 创意爱好者 · 独立创作者</div>
+        <div class="contact-bar">
+            <a href="#">GitHub</a>
+            <a href="#">博客</a>
+            <a href="mailto:hello@example.com">hello@example.com</a>
+            <a href="#">关于我</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- 关于我 -->
+        <section>
+            <h2>📌 关于我</h2>
+            <p>你好！我是一名热爱构建优雅网页的开发者，喜欢探索交互设计与用户体验。相信好的网站不仅是工具，也是一种表达。目前正在用 HTML / CSS / JavaScript 打造自己的数字花园。</p>
+            <p style="margin-top: 0.5rem;">🎯 当前目标：学习 Vue 并完成一个开源小项目。</p>
+        </section>
+
+        <!-- 技能 -->
+        <section>
+            <h2>🧰 技术栈</h2>
+            <div>
+                <span class="skill-tag">HTML5 / CSS3</span>
+                <span class="skill-tag">JavaScript (ES6+)</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Vue.js (学习中)</span>
+                <span class="skill-tag">响应式设计</span>
+                <span class="skill-tag">Figma 基础</span>
+            </div>
+        </section>
+
+        <!-- 项目展示 -->
+        <section>
+            <h2>📁 精选项目</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>📘 个人博客系统</h3>
+                    <div class="date">2025 · 静态站点</div>
+                    <p>基于 HTML + CSS 搭建的轻量博客模板，支持暗色模式与移动端适配，文章使用 Markdown 风格渲染。</p>
+                    <a href="#" class="project-link">查看项目 →</a>
+                </div>
+                <div class="card">
+                    <h3>🌦️ 天气小工具</h3>
+                    <div class="date">2025 · JavaScript</div>
+                    <p>调用免费天气 API，展示实时天气与未来三天预报，使用 localStorage 存储城市偏好。</p>
+                    <a href="#" class="project-link">查看项目 →</a>
+                </div>
+                <div class="card">
+                    <h3>🎨 设计作品集</h3>
+                    <div class="date">2024 · 视觉交互</div>
+                    <p>展示 UI 设计及前端交互动效，包含网格画廊与渐变光标效果，获得社区小范围推荐。</p>
+                    <a href="#" class="project-link">查看项目 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 经历 / 教育 -->
+        <section>
+            <h2>📖 经历足迹</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>自由前端开发者</h3>
+                    <div class="date">2023 — 至今</div>
+                    <p>为中小型企业搭建落地页与官网，优化加载性能，协作完成3个品牌站点。</p>
+                </div>
+                <div class="card">
+                    <h3>计算机科学与技术 · 本科</h3>
+                    <div class="date">2021 — 2025</div>
+                    <p>主修 Web 开发，参与校内互联网+竞赛，获得校二等奖。热爱技术分享。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系/留言区域（简易） -->
+        <section>
+            <h2>✉️ 保持联系</h2>
+            <p>想交流技术、合作或单纯打个招呼？欢迎通过邮件或 GitHub 联系我。</p>
+            <div style="margin-top: 1rem; background: #f1f5f9; border-radius: 1.2rem; padding: 1rem;">
+                <p style="font-size: 0.9rem;">💡 提示：这个网站完全用 HTML / CSS 编写，你可以直接修改代码，把它变成自己的专属名片！</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 丁奕乐 · 用 ❤️ 和 HTML/CSS 构建 · 更新于 2025年
+    </footer>
+</div>
+</body>
+</html>
